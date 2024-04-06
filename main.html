@@ -4,78 +4,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/favicon/favicon_stuffedToy.ico">
     <link rel="stylesheet" href="./style.css">
-    <title>自己紹介</title>
+    <title>私について</title>
 </head>
 
 <body>
-    <div id="header"></div>
-    <!-- <div class="header"> -->
-    <!-- <p>Profiles</p>
-        <div class="inquiry-area">
-            <a class="inquiry" href="./pages/inquiry/main.html">
-                <p>お問い<br />合わせ</p>
-            </a>
+    <header class="header">
+        <div class="menu-area">
+            <input type="checkbox" class="menu-btn" id="menu-btn">
+            <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li class="top"><a href="#Top">Top</a></li>
+                <li><a href="#profile">プロフィール</a></li>
+                <li><a href="#avlang">実務経験有</a></li>
+                <li><a href="#favorite-word">好きな言葉</a></li>
+                <li><a href="./html/inquiry/main.html">お問合せ</a></li>
+            </ul>
         </div>
-    </div> -->
-    <div class="contents">
-        <div class="content_body">
-            <h3>私について</h3>
-            <div class="face_and_profile">
-                <div class="face">
-                    <img src="./img/face.png" alt="顔写真">
-                </div>
-                <table border="1">
-                    <tr>
-                        <td></td>
-                        <td>紹介</td>
-                    </tr>
-                    <tr>
-                        <td>名前</td>
-                        <td>久慈和輝</td>
-                    </tr>
-                    <tr>
-                        <td>年齢</td>
-                        <td>23</td>
-                    </tr>
-                    <tr>
-                        <td>出身地</td>
-                        <td>岩手県</td>
-                    </tr>
-                    <tr>
-                        <td>趣味</td>
-                        <td>プログラミング、ゲーム</td>
-                    </tr>
-                </table>
+        <div class="page-title">
+            <div class="title">Profiles</div>
+        </div>
+    </header>
+
+    <main class="contents">
+        <h1 id="Top">Top</h1>
+        <div class="Top-introduction">
+            <div class="face">
+                <img src="./images/myImg.jpeg" alt="顔写真">
             </div>
+            <div class="profile">
+                <p>フルスタックエンジニアを目標に、日々学習を続ける新社会人です。</p>
+                <p>学生時代はプログラミングスクールのメンターや、内定先の営業チームのサポーターとしてのインターンに参加していました。</p>
+                <p>今後は会社での活動だけでなく、自分で稼ぐ力を身に着けるべく、成長への意識をもって取り組んでいくつもりです。</p>
+            </div>
+        </div>
+        <div>
             <hr>
-            <div class="body_second">
-                <ol>簡単なプログラム
-                    <li class="program1">カウンター</li>
-                    <div class="program1_content">
-                        <div class="program1_button">
-                            <button class="button1" onclick="countUp()">+1</button>
-                            <button class="button2" onclick="countDown()">-2</button>
-                        </div>
-                        <div class="program1_result_body">
-                            結果：<a class="program1_result">0</a>
-                        </div>
-                    </div>
-                    <hr>
-                    <li class="program1">Todoリスト</li>
-                    <div>
-                        <div id="todo-app">
-                            <input type="text" id="task-input" placeholder="Add your new todo">
-                            <button id="add-task-btn">Add Task</button>
-                            <ul id="todo-list"></ul>
-                        </div>
-                    </div>
-                </ol>
+        </div>
+        <h1 id="profile">プロフィール</h1>
+        <div class="Top-profile-table">
+            <table>
+                <tr>
+                    <td>名前</td>
+                    <td>久慈和輝(Kuji Kazuaki) </td>
+                </tr>
+                <tr>
+                    <td>年齢</td>
+                    <td>23歳</td>
+                </tr>
+                <tr>
+                    <td>出身地</td>
+                    <td>岩手県 <br>
+                        <p style="color: rgb(248, 62, 62)">※現在は東京に住んでいます</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>趣味</td>
+                    <td>1. プログラミング <br>
+                        &nbsp;休日は専らコード書きまくってます<br>
+                        2. ゲーム<br>
+                        &nbsp;スプラトゥーンがメインです。<br>
+                        &nbsp;やり始めると止まらないのでタイムロックコンテナ使って制御してます</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <h1 id="avlang">使用言語</h1>
+        <div class="Top-avlang">
+            <div>
+                <h3>実務経験有</h3>
+                <li>HTML/CSS</li>
+                <li>JavaScript(Vue.js)</li>
+                <li>Google Apps Script</li>
+
+            </div>
+            <div>
+                <h3>プロダクト制作経験有</h3>
+                <li>Python</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+            </div>
+            <div>
+                <h3>趣味レベル</h3>
+                <li>React.js</li>
+                <li>Node.js</li>
             </div>
         </div>
-    </div>
-    <div class="footer"></div>
-    <script src="main.js" type="module"></script>
+        <hr>
+        <h1 class="favorite-word">好きな言葉</h1>
+        <div class="Top-favorite-word">
+            <button class="favorite-btn" id="favorite-btn" onclick="pushFavoWord(e)">押してみて！</button>
+            <h3 class="favorite-word-selected" id="favorite-word"></h3>
+
+            <div class="already-memo">
+                ↓↓↓↓↓↓ 発掘した好きな言葉リスト：<p id="selected-favorite-word">0</p>個（全部で2個） ↓↓↓↓↓↓
+            </div>
+            <div id="already-List" class="already-List">
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+    </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>

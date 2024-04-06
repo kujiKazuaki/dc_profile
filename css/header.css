@@ -1,4 +1,122 @@
 .header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--main-profile-color);
+    width: 100%;
+    height: 52px;
+    z-index: 100;
+}
+
+
+/* Nav items */
+.menu {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    margin-top: 52px;
+    padding: 0 0 10px 0;
+    clear: both;
+    background: var(--main-profile-color);
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+    transform: scale(1, 0);
+    transform-origin: top;
+}
+
+/* Hamburger menu button */
+.menu-btn:checked~.menu {
+    transform: scale(1, 1);
+    transform-origin: top;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+/* Hamburger menbu text */
+.menu a {
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu li {
+    border-top: 1px solid white;
+    padding: 15px 0;
+    margin: 0 54px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu-btn:checked~.menu a,
+.menu-btn:checked~.menu li {
+    opacity: 1;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.menu-icon {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 24px 14px;
+    -webkit-tap-highlight-color: white;
+}
+
+.navicon {
+    background: white;
+    display: block;
+    height: 4px;
+    width: 40px;
+    position: relative;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon:before,
+.navicon:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: white;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon:before {
+    top: 9px;
+}
+
+.navicon:after {
+    bottom: 9px;
+}
+
+/* Hamburger Menu Animation Start */
+.menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked~.menu-icon:not(.steps) .navicon:before {
+    top: 0;
+}
+
+.menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    bottom: 0;
+}
+
+.menu-bt .header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,50 +125,10 @@
     width: 100%;
 }
 
-.header p {
+.page-title {
+    flex-grow: 1;
+    text-align: center;
     color: white;
     font-weight: bold;
     font-size: 30px;
-    /* flex-grow: 1; */
-    position: absolute;
-    text-align: center;
-    /* border: 2px solid green; */
-}
-
-.header div:last-of-type {
-    justify-content: flex-end;
-}
-
-.inquiry-area {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.inquiry {
-    text-decoration: none;
-    height: 100%;
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-left: 2px solid var(--main-contents-color);
-    background-color: #7bc5f3;
-}
-
-.inquiry:hover {
-    background-color: #639cbe;
-}
-
-.inquiry:active {
-    background-color: #639cbe;
-}
-
-.inquiry p {
-    color: white;
-    /* -webkit-text-stroke: 1px black; */
-    /* 1ピクセルの黒のアウトライン */
-    font-size: smaller;
 }

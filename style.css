@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @import "./css/modules/button.css";
 @import "./css/header.css";
 @import "./css/mainBody.css";
@@ -6,12 +8,17 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: var(--main-font-family);
+    font-weight: bold;
 }
 
 :root {
     --main-profile-color: #6bc6ff;
     --main-contents-color: rgb(248, 240, 230);
-    --main_button_color: rgb(254, 235, 202);
+    --main_button_color: rgb(255, 245, 227);
     --main_button_color_hover: rgb(187, 172, 146);
     --main_button_color_active: rgb(254, 235, 202, 0.2);
+
+    --main-font-family: "メイリオ";
+    --main-font-color: rgb(92, 81, 47);
 }

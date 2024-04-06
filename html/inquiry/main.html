@@ -4,103 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>お問い合わせフォーム</title>
 </head>
 
 <body>
-    <div class="title">
-        <h1>お問い合わせフォーム</h1>
-    </div>
-    <div id="myForm">
-        <div id="format">
-            <table border="1">
-                <tr>
-                    <th>名前</th>
-                    <td>
-                        <input type="text" required placeholder="田中 太郎">
-                        <span class="warning"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th>パスワード</th>
-                    <td>
-                        <input type="password" required placeholder="Enter your password">
-                        <span class="warning"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th>問い合わせカテゴリ</th>
-                    <td>
-                        <div class="select-items-area">
-                            <input type="checkbox" id="value1" name="scales" required />
-                            <label for="value1">小売販売</label>
-                            <input type="checkbox" id="value2" name="scales" required />
-                            <label for="value2">インターネット販売</label>
-                            <input type="checkbox" id="value3" name="scales" required />
-                            <label for="value3">取材・メディア掲載</label>
-                            <input type="checkbox" id="value4" name="scales" required />
-                            <label for="value4">その他</label>
-                        </div>
-                        <span class="warning"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th>性別</th>
-                    <td>
-                        <div class="select-items-area block-column">
-                            <div>
-                                <input type="radio" id="radio1" name="radio_gender" required>
-                                <label for="radio1">男性</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="radio2" name="radio_gender" required>
-                                <label for="radio2">女性</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="radio3" name="radio_gender" required>
-                                <label for="radio3">その他</label>
+    <header class="header">
+        <div class="menu-area">
+            <input type="checkbox" class="menu-btn" id="menu-btn">
+            <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="../../main.html">プロフィール</a></li>
+                <li><a href="./html/inquiry/main.html">お問合せ</a></li>
+            </ul>
+        </div>
+        <div class="page-title">
+            <div class="title">Profiles</div>
+        </div>
+    </header>
+    <main>
+        <div class="title">
+            <h1>お問い合わせフォーム</h1>
+        </div>
+        <div id="myForm">
+            <div id="format">
+                <table border="1">
+                    <tr>
+                        <th>名前</th>
+                        <td>
+                            <input type="text" required placeholder="田中 太郎">
+                            <span class="warning"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>パスワード</th>
+                        <td>
+                            <input type="password" required placeholder="Enter your password">
+                            <span class="warning"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>問い合わせカテゴリ</th>
+                        <td>
+                            <div class="select-items-area">
+                                <input type="checkbox" id="value1" name="scales" required />
+                                <label for="value1">小売販売</label>
+                                <input type="checkbox" id="value2" name="scales" required />
+                                <label for="value2">インターネット販売</label>
+                                <input type="checkbox" id="value3" name="scales" required />
+                                <label for="value3">取材・メディア掲載</label>
+                                <input type="checkbox" id="value4" name="scales" required />
+                                <label for="value4">その他</label>
                             </div>
                             <span class="warning"></span>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>出身地</th>
-                    <td>
-                        <select name="地方" id="" style="padding: 2px 5px;">
-                            <option value="v1">北海道</option>
-                            <optgroup label="東北地方">
-                                <option value="v2_1">青森県</option>
-                                <option value="v2_2">秋田県</option>
-                                <option value="v2_3">岩手県</option>
-                                <option value="v2_4">福島県</option>
-                                <option value="v2_5">福島県</option>
-                            </optgroup>
-                            <option value="v3">関東地方</option>
-                            <option value="v4">中部地方</option>
-                            <option value="v5">近畿地方</option>
-                            <option value="v6">四国地方</option>
-                            <option value="v7">九州地方</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <th>補足説明</th>
-                    <td>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="send-format-area">
-            <div>
-                <input type="submit" required vlaue="送信" id="send_format" onclick="sendFormat(event)">
-                <!-- 注意書きを表示するための空のspan -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>性別</th>
+                        <td>
+                            <div class="select-items-area block-column">
+                                <div>
+                                    <input type="radio" id="radio1" name="radio_gender" required>
+                                    <label for="radio1">男性</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="radio2" name="radio_gender" required>
+                                    <label for="radio2">女性</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="radio3" name="radio_gender" required>
+                                    <label for="radio3">その他</label>
+                                </div>
+                                <span class="warning"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>出身地</th>
+                        <td>
+                            <select name="地方" id="" style="padding: 2px 5px;">
+                                <option value="v1">北海道</option>
+                                <optgroup label="東北地方">
+                                    <option value="v2_1">青森県</option>
+                                    <option value="v2_2">秋田県</option>
+                                    <option value="v2_3">岩手県</option>
+                                    <option value="v2_4">福島県</option>
+                                    <option value="v2_5">福島県</option>
+                                </optgroup>
+                                <option value="v3">関東地方</option>
+                                <option value="v4">中部地方</option>
+                                <option value="v5">近畿地方</option>
+                                <option value="v6">四国地方</option>
+                                <option value="v7">九州地方</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>補足説明</th>
+                        <td>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="send-format-area">
+                <div>
+                    <input type="submit" required vlaue="送信" id="send_format" onclick="sendFormat(event)">
+                    <!-- 注意書きを表示するための空のspan -->
 
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer class="footer">
+    </footer>
 
     <script src="./main.js"></script>
 </body>

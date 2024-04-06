@@ -1,7 +1,6 @@
-.footer {
+footer {
     background-color: var(--main-profile-color);
     color: white;
-    position: fixed;
     width: 100%;
     height: 52px;
     text-align: center;

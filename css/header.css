@@ -1,5 +1,5 @@
 .header {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,6 +51,7 @@
     margin: 0 54px;
     opacity: 0;
     transition: 0.5s;
+    text-align: center;
 }
 
 .menu-btn:checked~.menu a,

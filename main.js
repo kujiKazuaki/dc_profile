@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (favoWords) {
         const favoWordsArray = JSON.parse(favoWords);
         if (favoWordsArray.length > 0) {
-            already_List.innerHTML = favoWordsArray.map(word => `<li>${word}</li>`).join('');
+            already_List.innerHTML = favoWordsArray.map(word => `<li class="card">${word}</li>`).join('');
             selected_num.textContent = alreadyNum || favoWordsArray.length;
         }
     }
@@ -26,6 +26,7 @@ const pushFavoWord = () => {
     const favoWord_List = [
         "苦あれば楽あり。楽あれば苦あり",
         "井の中の蛙大海を知らず",
+        "「プログラミングを勉強する」じゃなく「〇〇を作る」を目標に！",
     ]
     const randomIndex = Math.floor(Math.random() * favoWord_List.length);
     const selectedFavoWord = favoWord_List[randomIndex];
@@ -48,7 +49,7 @@ const pushFavoWord = () => {
          * 発掘した言葉をリストに追加する
          * 発掘した好きな言葉カウントを１つカウントアップする
          */
-        const card = document.createElement("div")
+        const card = document.createElement("li")
         card.className = "card"
         card.textContent = selectedFavoWord
         already_List.appendChild(card)

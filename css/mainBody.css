@@ -151,7 +151,6 @@ Top-avlang
 Top-favorite-word
 */
 .Top-favorite-word {
-    border: 2px solid red;
     position: relative;
 }
 
@@ -185,8 +184,10 @@ Top-favorite-word
 .already-List {
     border: 2px solid black;
     font-size: 20px;
+    padding: 10px 0;
 }
 
 .card {
     background-color: var(--main-contents-color);
+    padding: 5px 0;
 }

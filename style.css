@@ -4,6 +4,7 @@
 @import "./css/header.css";
 @import "./css/mainBody.css";
 @import "./css/footer.css";
+@import "./css/inquiry.css";
 
 * {
     margin: 0;

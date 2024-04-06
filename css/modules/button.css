@@ -1,0 +1,15 @@
+button {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 1px 5px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: var(--main_button_color_hover);
+}
+
+button:active {
+    background-color: var(--main_button_color_active);
+    transform: translateY(2px);
+}

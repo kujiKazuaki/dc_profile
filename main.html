@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>自己紹介</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <!-- <div class="header"> -->
+    <!-- <p>Profiles</p>
+        <div class="inquiry-area">
+            <a class="inquiry" href="./pages/inquiry/main.html">
+                <p>お問い<br />合わせ</p>
+            </a>
+        </div>
+    </div> -->
+    <div class="contents">
+        <div class="content_body">
+            <h3>私について</h3>
+            <div class="face_and_profile">
+                <div class="face">
+                    <img src="./img/face.png" alt="顔写真">
+                </div>
+                <table border="1">
+                    <tr>
+                        <td></td>
+                        <td>紹介</td>
+                    </tr>
+                    <tr>
+                        <td>名前</td>
+                        <td>久慈和輝</td>
+                    </tr>
+                    <tr>
+                        <td>年齢</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>出身地</td>
+                        <td>岩手県</td>
+                    </tr>
+                    <tr>
+                        <td>趣味</td>
+                        <td>プログラミング、ゲーム</td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div class="body_second">
+                <ol>簡単なプログラム
+                    <li class="program1">カウンター</li>
+                    <div class="program1_content">
+                        <div class="program1_button">
+                            <button class="button1" onclick="countUp()">+1</button>
+                            <button class="button2" onclick="countDown()">-2</button>
+                        </div>
+                        <div class="program1_result_body">
+                            結果：<a class="program1_result">0</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <li class="program1">Todoリスト</li>
+                    <div>
+                        <div id="todo-app">
+                            <input type="text" id="task-input" placeholder="Add your new todo">
+                            <button id="add-task-btn">Add Task</button>
+                            <ul id="todo-list"></ul>
+                        </div>
+                    </div>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>

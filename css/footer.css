@@ -1,0 +1,9 @@
+.footer {
+    background-color: #6bc6ff;
+    /* ダークグレーの背景色 */
+    color: white;
+    /* 白色のテキスト */
+    height: 10vh;
+    text-align: center;
+    /* テキストを中央揃え */
+}
